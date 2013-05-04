@@ -1,0 +1,19 @@
+Purpose
+=======
+
+The tool computes the word value of the given file.
+This can be helpful when solving some geocaching challenges.
+
+Installation
+============
+
+Just type 'make' to build the wordvalue program.
+
+Usage
+=====
+
+wordvalue [input_file]
+
+Examples:
+- wordvalue file
+- echo "Hello Wordvalue" | wordvalue
