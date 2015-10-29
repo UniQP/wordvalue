@@ -37,6 +37,10 @@ int main(int argc, char **argv)
 
 	if (argc == 2) {
 		input_file = fopen(argv[1], "r");
+		if (input_file == NULL) {
+			fprintf(stderr, "Cannot open input file %s\n", argv[1]);
+			return EXIT_FAILURE;
+		}
 	} else {
 		input_file = stdin;
 	}
