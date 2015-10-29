@@ -70,10 +70,12 @@ int main(int argc, char **argv)
 			case L'ß':
 				bww += 30;
 				break;
+			case L'\n':
+				printf("%u\n", bww);
+				bww = 0;
+				break;
 		}
 	}
-
-	printf("%u\n", bww);
 
 	if (argc == 2) {
 		fclose(input_file);
