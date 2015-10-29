@@ -41,10 +41,9 @@ int main(int argc, char **argv)
 		input_file = stdin;
 	}
 
-	wchar_t  character;
-	unsigned bww       = 0;
-
-	while (fscanf(input_file, "%lc", &character) == 1) {
+	unsigned bww = 0;
+	wint_t   character;
+	while ((character = fgetwc(input_file)) != WEOF) {
 		if (character >= L'0' && character <= L'9') {
 			bww += character - L'0';
 		} else if (character >= L'A' && character <= L'Z') {
