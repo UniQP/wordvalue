@@ -75,5 +75,9 @@ int main(int argc, char **argv)
 
 	printf("%u\n", bww);
 
+	if (argc == 2) {
+		fclose(input_file);
+	}
+
 	return EXIT_SUCCESS;
 }
